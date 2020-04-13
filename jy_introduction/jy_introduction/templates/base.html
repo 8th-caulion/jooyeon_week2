@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JooYeon_Blog</title>
+    <h1>JooYeon_Blog</h1> 
+    <h3><a href = "{% url 'home' %}">Home</a></h3>   
+    <h3><a href="{% url 'profile' %}">Profile</a></h3>
+    <h3><a href = "{% url 'travel' %}">Travel</a></h3>
+    <h3><a href = "{% url 'food' %}">Food</a></h3>
+
+</head>
+
+<body>
+    {% block contents %}
+    
+    {% endblock %}
+</body>
+
+
+<footer>
+    instargram_<a href="https://www.instagram.com/jooyeon6259/?hl=ko">jooyeon6259</a>
+    <p>email : lewndus7749@naver.com</p>
+    
+</footer>
+</html>

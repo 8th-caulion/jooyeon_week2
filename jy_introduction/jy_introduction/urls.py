@@ -16,10 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # blog앱에 해당하는 urls들
     path('',include('blog.urls')),
-    # daily앱에 해당하는 urls들
-    path('',include('daily.urls')),
+    
+    #travel앱에 해당 
+    path('',include('travel.urls')),
+   
+    #food앱에 해당 
+    path('',include('food.urls')),
+    
+
 ]

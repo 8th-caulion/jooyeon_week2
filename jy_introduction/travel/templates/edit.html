@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+{% block contents %}    
+
+<form action = "{% url 'update' travel.id %}">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">제목</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="제목을 입력하시오" name ="title" value = "{{travel.title}}">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">본문 내용</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="글을 작성하시오" name ="body">{{travel.body}}</textarea>
+    </div>
+    <input class = "btn btn-info" type = "submit" value = "submit"> 
+</form>
+
+
+{% endblock %}

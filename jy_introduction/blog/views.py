@@ -6,3 +6,6 @@ def home(request):
 
 def profile(request):
     return render(request, 'profile.html')
+
+def food(request):
+    return render(request,'food.html')

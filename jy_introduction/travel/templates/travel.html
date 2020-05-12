@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+
+{% block contents %}    
+<div>
+  <button type="button" class="btn btn-outline-primary"> <h5><a href = "{% url 'new' %}">게시글 작성</a></h5></button>
+  <hr>
+</div>
+
+
+
+{% for travel in travels.all %}
+<div class="row">
+    <div class="col-sm-6" style = "margin-bottom : 25px;"> 
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{travel.title}}</h5>
+          {{travel.pub_date}}
+          <p>
+          <h6 class="card-subtitle mb-2 text-muted">작성자 : {{travel.author}}</h6>
+          <p class="card-text">{{travel.summary}}</p>
+          <a href="{% url 'detail' travel.id %}">Comments: {{ travel.comments.count }}</a>
+          <a href="{% url 'detail' travel.id %}" class="btn btn-primary">더보기</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <hr>
+{% endfor %}
+
+
+
+{% endblock %}

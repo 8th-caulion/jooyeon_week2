@@ -3,8 +3,8 @@
 {% block contents %}    
 
 
-<button type="button" class="btn btn-outline-danger"><a href = "{% url 'delete' details.id %}"> 삭제하기</a></button>
-<button type="button" class="btn btn-outline-success"><a href = "{% url 'edit' details.id %}"> 수정하기</a></button>
+<button type="button" class="btn btn-outline-danger"><a href = "{% url 'food_delete' details.id %}"> 삭제하기</a></button>
+<button type="button" class="btn btn-outline-success"><a href = "{% url 'food_edit' details.id %}"> 수정하기</a></button>
 <button type="button" class="btn btn-outline-dark"><a href = "{% url 'food' %}"> 뒤로가기</a></button>
 
 <div class="row">

@@ -2,7 +2,7 @@
 
 {% block contents %}    
 
-<form action = "{% url 'update' travel.id %}">
+<form action = "{% url 'travel_update' travel.id %}">
     <div class="form-group">
         <label for="exampleFormControlInput1">제목</label>
         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="제목을 입력하시오" name ="title" value = "{{travel.title}}">

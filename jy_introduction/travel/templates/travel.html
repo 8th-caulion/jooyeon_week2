@@ -2,7 +2,7 @@
 
 {% block contents %}    
 <div>
-  <button type="button" class="btn btn-outline-primary"> <h5><a href = "{% url 'new' %}">게시글 작성</a></h5></button>
+  <button type="button" class="btn btn-outline-primary"> <h5><a href = "{% url 'travel_new' %}">게시글 작성</a></h5></button>
   <hr>
 </div>
 
@@ -18,8 +18,8 @@
           <p>
           <h6 class="card-subtitle mb-2 text-muted">작성자 : {{travel.author}}</h6>
           <p class="card-text">{{travel.summary}}</p>
-          <a href="{% url 'detail' travel.id %}">Comments: {{ travel.comments.count }}</a>
-          <a href="{% url 'detail' travel.id %}" class="btn btn-primary">더보기</a>
+          <a href="{% url 'travel_detail' travel.id %}">Comments: {{ travel.comments.count }}</a>
+          <a href="{% url 'traveL_detail' travel.id %}" class="btn btn-primary">더보기</a>
         </div>
       </div>
     </div>
